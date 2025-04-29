@@ -74,7 +74,13 @@ export class LoginPage implements OnInit {
           // Redirection en fonction du rôle
           const userRole = response.user.roles;
 
-          if (userRole === 'chef de direction technique') {
+          if (userRole.includes('chef de direction technique')) {
+            this.router.navigate(['/dashboard']);
+          } else {
+            this.router.navigate(['/login']);
+          }
+          
+          /*if (userRole === 'chef de direction technique') {
             this.router.navigate(['/dashboard']);
 
 
@@ -82,7 +88,7 @@ export class LoginPage implements OnInit {
 
           else {
             this.router.navigate(['/login']); // Rôle non reconnu
-          }
+          }*/
 
 
         } else {

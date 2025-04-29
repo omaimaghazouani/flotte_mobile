@@ -9,8 +9,8 @@
 
     <div class="heading">Login</div>
     <form [formGroup]="loginForm" class="form"><!--(ngSubmit)="login()"-->
-      <input required class="input" type="email" name="email" id="email" autocomplete="email" placeholder="E-mail">
-      <input required class="input" type="password" name="password" id="password" autocomplete="current-password" placeholder="Password">
+      <input formControlName="email" required class="input" type="email" placeholder="E-mail">
+      <input formControlName="password" required class="input" type="password" placeholder="Password">
       <span class="forgot-password"><a href="#">Forgot Password ?</a></span>
       <button class="login-button" type="submit" (click)="login()" value="Login">Login</button>
     </form>
