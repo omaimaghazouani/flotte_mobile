@@ -37,4 +37,9 @@ export class StatService {
   getDispoFerme(): Observable<any>{
     return this.httpClient.get<any>(`${this.ordreUrl}/totalDispoFerme`);
   }
+
+  statistiquesUrl: string = "http://localhost:3100/statistiques";
+  getTotalConsomationByVehiculeAndMonth(numparc: number): Observable<any[]> {
+    return this.httpClient.get<any[]>(`${this.statistiquesUrl}/${numparc}`);
+}
 }
