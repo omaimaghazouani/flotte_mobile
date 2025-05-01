@@ -38,6 +38,10 @@ const routes: Routes = [
     path: 'consomation-stat',
     loadChildren: () => import('./consomation-stat/consomation-stat.module').then( m => m.ConsomationStatPageModule)
   },
+  {
+    path: 'aaa',
+    loadChildren: () => import('./aaa/aaa.module').then( m => m.AaaPageModule)
+  },
 
 
 
