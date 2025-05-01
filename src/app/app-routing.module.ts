@@ -26,7 +26,21 @@ const routes: Routes = [
     canActivate: [authGuard],
     data: { roles: ['chef de direction technique'] }
 
-  }
+  },  {
+    path: 'vehicule-stat',
+    loadChildren: () => import('./vehicule-stat/vehicule-stat.module').then( m => m.VehiculeStatPageModule)
+  },
+  {
+    path: 'order-stat',
+    loadChildren: () => import('./order-stat/order-stat.module').then( m => m.OrderStatPageModule)
+  },
+  {
+    path: 'consomation-stat',
+    loadChildren: () => import('./consomation-stat/consomation-stat.module').then( m => m.ConsomationStatPageModule)
+  },
+
+
+
 
 ];
 

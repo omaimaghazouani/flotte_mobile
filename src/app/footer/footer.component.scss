@@ -1,0 +1,78 @@
+/* Style global pour la container */
+.container {
+  display: flex;
+  justify-content: space-around;
+  gap: 20px;
+  padding: 20px;
+  flex-wrap: wrap;
+}
+
+/* Style de chaque bouton */
+button.mat-icon-button {
+  background-color: #2196f3; /* Bleu principal */
+  color: white;
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0;
+  font-size: 14px;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  border: none;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Effet au survol (hover) du bouton */
+button.mat-icon-button:hover {
+  background-color: #1976d2; /* Bleu plus foncé au survol */
+  transform: translateY(-4px); /* Légère élévation du bouton */
+}
+
+/* Effet focus pour l'accessibilité */
+button.mat-icon-button:focus {
+  outline: none;
+  box-shadow: 0 0 8px rgba(33, 150, 243, 0.7);
+}
+
+/* Style de l'icône */
+mat-icon {
+  font-size: 24px; /* Taille de l'icône */
+  margin-right: 5px;
+}
+
+/* Style pour le texte sous l'icône */
+button.mat-icon-button span {
+  font-size: 12px;
+  color: white;
+  display: block;
+  margin-top: 8px;
+}
+
+/* Bouton spécifique avec icône Vehicle */
+button.mat-icon-button[aria-label="Véhicule disponible"] {
+  background-color: #4caf50; /* Vert pour Véhicule */
+}
+
+button.mat-icon-button[aria-label="Véhicule disponible"]:hover {
+  background-color: #388e3c; /* Vert foncé au survol */
+}
+
+/* Bouton spécifique avec icône Order */
+button.mat-icon-button[aria-label="Order"] {
+  background-color: #ff9800; /* Orange pour Order */
+}
+
+button.mat-icon-button[aria-label="Order"]:hover {
+  background-color: #fb8c00; /* Orange foncé au survol */
+}
+
+/* Bouton spécifique avec icône Consumption */
+button.mat-icon-button[aria-label="Consumption"] {
+  background-color: #f44336; /* Rouge pour Consumption */
+}
+
+button.mat-icon-button[aria-label="Consumption"]:hover {
+  background-color: #e53935; /* Rouge foncé au survol */
+}
